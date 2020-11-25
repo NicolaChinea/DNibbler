@@ -1,0 +1,92 @@
+unit d.dati;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.SQLite,
+  FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.FMXUI.Wait, Data.DB,
+  FireDAC.Comp.Client, FireDAC.Comp.ScriptCommands, FireDAC.Stan.Util,
+  FireDAC.Comp.Script, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.ConsoleUI.Wait, FireDAC.Comp.UI;
+
+
+type
+  TDMDati = class(TDataModule)
+    FDConnection: TFDConnection;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    FDScript: TFDScript;
+    T_Livelli: TFDTable;
+    T_LivelliID: TFDAutoIncField;
+    T_LivelliCUORI: TIntegerField;
+    T_LivelliPERLE: TIntegerField;
+    T_LivelliTEMPO: TStringField;
+    T_LivelliPUNTI: TIntegerField;
+    T_LivelliLIVELLO: TIntegerField;
+    T_LivelliMALUS: TIntegerField;
+    T_LivelliMURA: TIntegerField;
+    T_LivelliID_HIGH: TIntegerField;
+    T_HIGHSCORE: TFDTable;
+    Q_HallFame: TFDQuery;
+    D_HIGHSCORE: TDataSource;
+    T_HIGHSCOREID: TFDAutoIncField;
+    T_HIGHSCOREDATA: TDateField;
+    T_HIGHSCORENOME: TStringField;
+    T_HIGHSCOREPUNTI: TIntegerField;
+    T_HIGHSCORELIVELLO: TIntegerField;
+    procedure DataModuleCreate(Sender: TObject);
+    procedure DataModuleDestroy(Sender: TObject);
+    procedure FDConnectionBeforeConnect(Sender: TObject);
+
+  private
+    { Private declarations }
+    function DatabaseFileName: string;
+
+  public
+    { Public declarations }
+  end;
+
+var
+  DMDati: TDMDati;
+
+implementation
+
+uses
+  System.IOUtils;
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+function TDMDati.DatabaseFileName: string;
+begin
+{$IF DEFINED(MSWINDOWS)}
+  Result := TPath.Combine(ExtractFilePath(ParamStr(0)), 'Nibbler.sdb');
+{$ELSE}
+  Result := TPath.Combine(TPath.GetDocumentsPath, 'Nibbler.sdb');
+{$ENDIF}
+end;
+
+procedure TDMDati.DataModuleCreate(Sender: TObject);
+begin
+  FDConnection.Connected := True;
+  FDScript.ExecuteAll;
+  T_HIGHSCORE.open;
+  T_Livelli.Open;
+end;
+
+procedure TDMDati.DataModuleDestroy(Sender: TObject);
+begin
+  T_HIGHSCORE.Close;
+  T_Livelli.Close;
+  FDConnection.Connected := False;
+end;
+
+procedure TDMDati.FDConnectionBeforeConnect(Sender: TObject);
+begin
+  FDConnection.Params.Values['Database'] := DatabaseFileName;
+end;
+
+end.
+

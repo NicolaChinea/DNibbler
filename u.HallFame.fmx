@@ -1,0 +1,173 @@
+object FHallFame: TFHallFame
+  Size.Width = 386.000000000000000000
+  Size.Height = 544.000000000000000000
+  Size.PlatformDefault = False
+  object lyMain: TLayout
+    Align = Client
+    Size.Width = 386.000000000000000000
+    Size.Height = 544.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rFondo: TRectangle
+      Align = Client
+      Fill.Color = xFF0F2C77
+      Size.Width = 386.000000000000000000
+      Size.Height = 544.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF1771B0
+      object Grid1: TGrid
+        CanFocus = True
+        ClipChildren = True
+        Position.X = 8.000000000000000000
+        Position.Y = 52.000000000000000000
+        Size.Width = 369.000000000000000000
+        Size.Height = 217.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claCrimson
+        StyledSettings = [Family, Size, Style]
+        TabOrder = 0
+        RowCount = 0
+        Options = [ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+        Viewport.Width = 365.000000000000000000
+        Viewport.Height = 192.000000000000000000
+      end
+      object Grid2: TGrid
+        CanFocus = True
+        ClipChildren = True
+        Position.X = 8.000000000000000000
+        Position.Y = 272.000000000000000000
+        Size.Width = 369.000000000000000000
+        Size.Height = 225.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        RowCount = 0
+        Viewport.Width = 365.000000000000000000
+        Viewport.Height = 200.000000000000000000
+      end
+      object rbtOK: TRectangle
+        Fill.Color = xFF1771B0
+        Position.X = 144.000000000000000000
+        Position.Y = 502.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 15.000000000000000000
+        YRadius = 15.000000000000000000
+        object Text4: TText
+          Align = Client
+          Cursor = crHandPoint
+          Size.Width = 100.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'OK'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claAliceblue
+          OnClick = Text4Click
+        end
+      end
+      object Rectangle1: TRectangle
+        Align = Top
+        Fill.Color = xFF0F2C77
+        Size.Width = 386.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF1771B0
+        object Text1: TText
+          Align = Top
+          Size.Width = 386.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'HALL OF FAME'
+          TextSettings.Font.Size = 28.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claAliceblue
+        end
+      end
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DMDati.T_HIGHSCORE
+    ScopeMappings = <>
+    Left = 80
+    Top = 264
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 260
+    Top = 262
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      Columns = <
+        item
+          MemberName = 'NOME'
+          ReadOnly = True
+          Header = 'Nome'
+          Width = 180
+        end
+        item
+          MemberName = 'DATA'
+          ReadOnly = True
+          Header = 'Data'
+          Width = 70
+          ColumnStyle = '90'
+        end
+        item
+          MemberName = 'PUNTI'
+          ReadOnly = True
+          Header = 'Punti'
+          Width = 90
+        end>
+    end
+    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = Grid2
+      Columns = <
+        item
+          MemberName = 'LIVELLO'
+          Header = 'Livello'
+          Width = 45
+        end
+        item
+          MemberName = 'TEMPO'
+          Header = 'Tempo'
+          Width = 70
+        end
+        item
+          MemberName = 'PUNTI'
+          Header = 'Punti'
+          Width = 45
+        end
+        item
+          MemberName = 'CUORI'
+          Header = 'Cuori'
+          Width = 45
+        end
+        item
+          MemberName = 'PERLE'
+          Header = 'Perle'
+          Width = 45
+        end
+        item
+          MemberName = 'MALUS'
+          Header = 'Malus'
+          Width = 45
+        end
+        item
+          MemberName = 'MURA'
+          Header = 'Mura'
+          Width = 45
+        end>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DMDati.T_Livelli
+    ScopeMappings = <>
+    Left = 160
+    Top = 264
+  end
+end

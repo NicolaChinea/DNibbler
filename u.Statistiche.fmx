@@ -1,0 +1,197 @@
+object FStat: TFStat
+  Size.Width = 214.000000000000000000
+  Size.Height = 317.000000000000000000
+  Size.PlatformDefault = False
+  object lyMain: TLayout
+    Align = Client
+    Size.Width = 214.000000000000000000
+    Size.Height = 317.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rBoard: TRectangle
+      Align = Client
+      Fill.Color = xFF0F2C77
+      Size.Width = 214.000000000000000000
+      Size.Height = 317.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF1771B0
+      object txBonus: TText
+        Position.X = 6.000000000000000000
+        Position.Y = 83.000000000000000000
+        Size.Width = 83.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Cuori:'
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claRed
+        TextSettings.HorzAlign = Leading
+      end
+      object txMuri: TText
+        Position.X = 7.000000000000000000
+        Position.Y = 159.000000000000000000
+        Size.Width = 82.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Muri:'
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claBlueviolet
+        TextSettings.HorzAlign = Leading
+      end
+      object txPerle: TText
+        Position.X = 7.000000000000000000
+        Position.Y = 121.000000000000000000
+        Size.Width = 82.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Perle:'
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claChartreuse
+        TextSettings.HorzAlign = Leading
+      end
+      object txPunti: TText
+        Position.X = 7.000000000000000000
+        Position.Y = 197.000000000000000000
+        Size.Width = 82.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Punti:'
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claAqua
+        TextSettings.HorzAlign = Leading
+      end
+      object txValBonus: TText
+        Position.X = 95.000000000000000000
+        Position.Y = 83.000000000000000000
+        Size.Width = 110.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claRed
+        TextSettings.HorzAlign = Leading
+      end
+      object txValPerle: TText
+        Position.X = 95.000000000000000000
+        Position.Y = 121.000000000000000000
+        Size.Width = 110.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claChartreuse
+        TextSettings.HorzAlign = Leading
+      end
+      object txValMuri: TText
+        Position.X = 95.000000000000000000
+        Position.Y = 159.000000000000000000
+        Size.Width = 110.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claBlueviolet
+        TextSettings.HorzAlign = Leading
+      end
+      object txValPunti: TText
+        Position.X = 95.000000000000000000
+        Position.Y = 197.000000000000000000
+        Size.Width = 110.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claAqua
+        TextSettings.HorzAlign = Leading
+      end
+      object Text1: TText
+        Position.X = 7.000000000000000000
+        Position.Y = 234.000000000000000000
+        Size.Width = 82.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Malus:'
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claLightsalmon
+        TextSettings.HorzAlign = Leading
+      end
+      object txValMalus: TText
+        Position.X = 95.000000000000000000
+        Position.Y = 234.000000000000000000
+        Size.Width = 110.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claLightsalmon
+        TextSettings.HorzAlign = Leading
+      end
+      object Text3: TText
+        Position.X = 6.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 84.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Time:'
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Leading
+      end
+      object txValTime: TText
+        Position.X = 95.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 110.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Leading
+      end
+      object Rectangle1: TRectangle
+        Fill.Color = xFF1771B0
+        Position.X = 57.000000000000000000
+        Position.Y = 276.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 15.000000000000000000
+        YRadius = 15.000000000000000000
+        object Text5: TText
+          Align = Client
+          Cursor = crHandPoint
+          Size.Width = 100.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'OK'
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claAliceblue
+        end
+      end
+      object Rectangle2: TRectangle
+        Align = Top
+        Fill.Color = xFF0F2C77
+        Size.Width = 214.000000000000000000
+        Size.Height = 39.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF1771B0
+        object Text2: TText
+          Align = Top
+          Size.Width = 214.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'STATISTICHE'
+          TextSettings.Font.Size = 28.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF1771B0
+        end
+      end
+    end
+  end
+end
