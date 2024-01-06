@@ -75,7 +75,7 @@ begin
       end;
 
       Region.Fill.Bitmap.Bitmap.canvas.Stroke.Kind := TBrushKind.None;
-      Region.Fill.Bitmap.Bitmap.canvas.StrokeThickness := 0;
+      Region.Fill.Bitmap.Bitmap.canvas.Stroke.Thickness := 0;
 
       sWidth  := 8;
       sHeight := 8;
@@ -113,7 +113,7 @@ begin
       Region.Fill.Bitmap.bitmap.Canvas.Font.Family := 'Courier New';
       Region.Fill.Bitmap.bitmap.Canvas.Font.size := 8;
       Region.Fill.Bitmap.Bitmap.canvas.Stroke.Kind := TBrushKind.None;
-      Region.Fill.Bitmap.Bitmap.canvas.StrokeThickness := 0;
+      Region.Fill.Bitmap.Bitmap.canvas.Stroke.Thickness := 0;
       Region.Fill.Bitmap.bitmap.Canvas.Fill.Color := Color;
 
       sWidth  := 8;//Region.Fill.Bitmap.bitmap.Canvas.TextWidth('X');
